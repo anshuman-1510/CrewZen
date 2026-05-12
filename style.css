@@ -730,3 +730,83 @@ section {
         font-size: 2.2rem;
     }
 }
+/* ===================================
+   MOBILE HERO LAYOUT
+   Phone view mein image top par aur text neeche
+   Is code ko CSS file ke bilkul end mein paste karo.
+=================================== */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 60px;
+        min-height: auto;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column-reverse; /* Right image upar, left text neeche */
+        gap: 30px;
+        text-align: center;
+    }
+
+    /* Slider/Image section */
+    .hero-slider-container {
+        width: 100%;
+        height: auto;
+        order: 1;
+    }
+
+    .hero-slider {
+        height: auto;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+        object-fit: contain;
+        object-position: center;
+        margin: 0 auto;
+    }
+
+    /* Text section */
+    .hero-content {
+        order: 2;
+        margin-bottom: 0;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .btn {
+        margin: 0 auto;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .hero-headline {
+        font-size: 2.3rem;
+        line-height: 1.1;
+    }
+
+    .slide img {
+        max-height: 250px;
+    }
+
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+}
