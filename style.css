@@ -514,19 +514,15 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;                /* Fills circle properly */
-    object-position: center top;      /* Keeps face centered */
+    object-position: center center;      /* Keeps face centered */
     display: block;
 }
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-    .founder-image {
-        width: 260px;
-        height: 260px;
-    }
-
     .founder-photo {
-        object-position: center 15%;
+        object-position: center center;
+        transform: scale(1.08); /* Thoda zoom so face centered rahe */
     }
 }
 .founder-name {
