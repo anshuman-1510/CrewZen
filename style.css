@@ -518,6 +518,17 @@ section {
     display: block;
 }
 
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .founder-image {
+        width: 260px;
+        height: 260px;
+    }
+
+    .founder-photo {
+        object-position: center 15%;
+    }
+}
 .founder-name {
     font-size: 2.5rem;
     margin-bottom: 5px;
