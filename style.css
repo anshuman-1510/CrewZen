@@ -509,20 +509,52 @@ section {
     box-shadow: 0 10px 30px rgba(255, 106, 0, 0.25);
 }
 
-/* Founder image */
+/* Circle container */
+.founder-image {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 4px solid #ff6a00;
+    position: relative;
+}
+
+/* Image */
 .founder-photo {
     width: 100%;
     height: 100%;
-    object-fit: cover;                /* Fills circle properly */
-    object-position: center center;      /* Keeps face centered */
+    object-fit: cover;
+    object-position: center center;
     display: block;
+
+    /* Face ko exact center lane ke liye */
+    transform: scale(1.15) translateY(-8px);
 }
 
-/* Mobile responsive */
+/* Tablet */
 @media (max-width: 768px) {
+    .founder-image {
+        width: 260px;
+        height: 260px;
+    }
+
     .founder-photo {
+        transform: scale(1.18) translateY(-6px);
         object-position: center center;
-        transform: scale(1.08); /* Thoda zoom so face centered rahe */
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .founder-image {
+        width: 240px;
+        height: 240px;
+    }
+
+    .founder-photo {
+        transform: scale(1.22) translateY(-4px);
+        object-position: center center;
     }
 }
 .founder-name {
